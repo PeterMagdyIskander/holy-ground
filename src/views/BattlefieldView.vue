@@ -1,12 +1,16 @@
 <template>
-    <div>
+    <div class="store-container">
 
-        <app-header :title="'Rise Of The Kingdom'" :subtitle="'Battlefield'"></app-header>
+        <app-header :title="'Rise Of The Kingdom'" :subtitle="'Store'"></app-header>
         <span class="material-symbols-outlined" @click="navigateToCart">
+            <span class="check" v-if="isCartNotEmpty()"></span>
             shopping_bag
         </span>
-        <item v-for="item in fashionShowItems" :key="item.name" :itemInfo="item" @editQuantity="editQuantity"></item>
+        <div class="item-container">
+            <item v-for="item in fashionShowItems" :key="item.name" :itemInfo="item" @editQuantity="editQuantity">
+            </item>
 
+        </div>
     </div>
 </template>
 
@@ -16,7 +20,7 @@ import Item from '@/components/Store/Item.vue'
 export default {
     name: "battlefield-view",
     computed: {
-        ...mapGetters(['getUser']),
+        ...mapGetters(['getUser','getCart']),
     },
     components: {
         AppHeader,
@@ -66,10 +70,43 @@ export default {
                     break;
             }
         },
-        navigateToCart(){
+        navigateToCart() {
             this.$router.push("/cart")
+        },
+        isCartNotEmpty(){
+            return this.getCart.length>0;
         }
     }
 }
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.store-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-container {
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 15px;
+}
+.material-symbols-outlined{
+    align-self: flex-end;
+    margin:0 10px;
+    position: relative;
+    font-size: 32px;
+    .check{
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: darken($color: #aa0082, $amount: 10);
+        border-radius: 50%;
+        right: -2px;
+        top: 0;
+    }
+}
+</style>
