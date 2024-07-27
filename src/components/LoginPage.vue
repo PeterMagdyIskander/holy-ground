@@ -35,6 +35,8 @@ export default {
 div {
   height: 100%;
   width: 100%;
+  background-image: linear-gradient(#252a52 .1em, transparent .1em), linear-gradient(90deg, #252a52 .1em, transparent .1em);
+  background-size: 2em 2em;
   background-color: #162041;
   text-align: center;
   padding: 250px 0;

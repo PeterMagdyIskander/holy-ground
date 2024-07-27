@@ -1,6 +1,6 @@
 <template>
     <div>
-        <app-header :title="'Rise Of The Kingdom'" :subtitle="'Assign Players'"></app-header>
+        <app-header :title="'Holy Ground'" :subtitle="'Assign Players'"></app-header>
         <input class="upload-button" type="file" @change="handleFileUpload" />
     </div>
 </template>

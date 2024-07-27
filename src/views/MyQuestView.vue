@@ -1,6 +1,6 @@
 <template>
     <div>
-        <app-header :title="'Rise Of The Kingdom'" :subtitle="'My Quest'"></app-header>
+        <app-header :title="'Holy Ground'" :subtitle="'My Quest'"></app-header>
         <QuestMoreInfo :quest="quest"></QuestMoreInfo>
         <div id="submissionQRCode"></div>
     </div>

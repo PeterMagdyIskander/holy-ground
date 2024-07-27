@@ -1,10 +1,10 @@
 <template>
     <div class="store-container">
 
-        <app-header :title="'Rise Of The Kingdom'" :subtitle="'Store'"></app-header>
+        <app-header :title="'Holy Ground'" :subtitle="'Store'"></app-header>
         <span class="material-symbols-outlined" @click="navigateToCart">
             <span class="check" v-if="isCartNotEmpty()">{{this.getCart.length}}</span>
-            shopping_bag
+            shopping_cart
         </span>
         <div class="item-container">
             <item v-for="item in fashionShowItems" :key="item.name" :itemInfo="item" @editQuantity="editQuantity">
@@ -90,6 +90,7 @@ export default {
 .item-container {
     width: 350px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     column-gap: 25px;
     row-gap: 15px;

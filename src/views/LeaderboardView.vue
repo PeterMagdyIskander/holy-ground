@@ -1,6 +1,6 @@
 <template>
     <div>
-        <app-header :title="'Rise Of The Kingdom'" :subtitle="'Leaderboard'"></app-header>
+        <app-header :title="'Holy Ground'" :subtitle="'Leaderboard'"></app-header>
 
         <h1>Leaderboard</h1>
         <table>

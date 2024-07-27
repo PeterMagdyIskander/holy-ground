@@ -1,6 +1,6 @@
 <template>
     <div>
-        <app-header :title="'Rise Of The Kingdom'" :subtitle="'Add Quest'"></app-header>
+        <app-header :title="'Holy Ground'" :subtitle="'Add Quest'"></app-header>
 
         <form class="home-container" @submit.prevent="handleSubmit">
             <div class="input-container">

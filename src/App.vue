@@ -11,7 +11,7 @@
           <ul class="sidemenu__list">
             <li class="sidemenu__item" @click="closeMenu"><router-link to="/">Home</router-link></li>
             <li class="sidemenu__item" @click="closeMenu"><router-link to="/QuestCenter">Quest Center</router-link></li>
-            <li class="sidemenu__item" @click="closeMenu"> <router-link to="/Battlefield">Battlefield</router-link></li>
+            <li class="sidemenu__item" @click="closeMenu"> <router-link to="/Store">Store</router-link></li>
             <li class="sidemenu__item" @click="closeMenu"><router-link to="/MyQuest">My Quest</router-link></li>
             <li class="sidemenu__item" @click="closeMenu"><router-link to="/QRCode">My QR Code</router-link></li>
             <li class="sidemenu__item" @click="closeMenu"><router-link to="/AddQuest">Add Quest</router-link></li>
@@ -51,7 +51,9 @@ export default {
 html,
 body {
   height: 100%;
-  background-color: #F2F5FF !important;
+  background-image: radial-gradient(rgb(22 32 65 / 30%) 1px, transparent 0);
+  background-size: 2em 2em;
+  background-color: #e6f7ff !important;
 
   >* {
     color: #FFF;
@@ -69,6 +71,8 @@ body {
   nav {
     width: 100%;
     height: 100%;
+    background-image: linear-gradient(#252a52 .1em, transparent .1em), linear-gradient(90deg, #252a52 .1em, transparent .1em);
+    background-size: 2em 2em;
     background-color: #162041 !important;
     position: absolute;
     top: 0;

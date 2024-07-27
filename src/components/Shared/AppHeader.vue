@@ -26,6 +26,8 @@ export default {
 .header-container {
     width: 100%;
     height: 150px;
+    background-image: linear-gradient(#252a52 .1em, transparent .1em), linear-gradient(90deg, #252a52 .1em, transparent .1em);
+    background-size: 2em 2em;
     background-color: #162041;
     display: flex;
     flex-direction: column;

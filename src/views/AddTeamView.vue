@@ -1,6 +1,6 @@
 <template>
     <div>
-        <app-header :title="'Rise Of The Kingdom'" :subtitle="'Add Team'"></app-header>
+        <app-header :title="'Holy Ground'" :subtitle="'Add Team'"></app-header>
 
         <form class="home-container" @submit.prevent="handleSubmit">
             <div class="input-container">
@@ -47,7 +47,8 @@ export default {
                 const db = getFirestore();
                 const teamRef = doc(db, 'teams', this.form.name);
                 await setDoc(teamRef, {
-                    gold: 0
+                    gold: 0,
+                    items:[]
                 });
                 alert('Team added successfully!');
                 this.resetForm();

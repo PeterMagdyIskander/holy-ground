@@ -19,8 +19,8 @@ const routes = [
     component: () => import("../views/QuestMoreInfoView.vue"),
   },
   {
-    path: "/Battlefield",
-    name: "Battlefield",
+    path: "/Store",
+    name: "Store",
     component: () => import("../views/BattlefieldView.vue"),
   },
   {

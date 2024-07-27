@@ -1,6 +1,6 @@
 <template>
     <div>
-        <app-header :title="'Rise Of The Kingdom'" :subtitle="'Quest Center'"></app-header>
+        <app-header :title="'Holy Ground'" :subtitle="'Quest Center'"></app-header>
 
         <selection-bar :options="options" @selected="handleOptionSelection"></selection-bar>
         <quest-card v-for="quest in questList" :key="quest.id" :title="quest.title" :id="quest.id"
