@@ -5,7 +5,7 @@
         </span>
         <p class="item-price">{{ itemInfo.price }}<span>.99</span></p>
         <p class="item-name">{{ itemInfo.name }}</p>
-        <div class="buttons-container">
+        <div class="buttons-container" v-if="getUser.isTeamLead===true">
             <button class="decrease" v-if="itemInfo.quantity > 0" @click="editQuantity('-')">
                 <p>-</p>
             </button>
@@ -18,8 +18,13 @@
 </template>
 
 <script>
+
+import { mapGetters } from 'vuex';
 export default {
     name: "item",
+    computed: {
+        ...mapGetters(['getUser']),
+    },
     props: {
         itemInfo: {
             type: Object,

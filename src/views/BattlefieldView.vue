@@ -2,7 +2,7 @@
     <div class="store-container">
 
         <app-header :title="'Holy Ground'" :subtitle="'Store'"></app-header>
-        <span class="material-symbols-outlined" @click="navigateToCart">
+        <span class="material-symbols-outlined"  v-if="getUser.isTeamLead===true" @click="navigateToCart">
             <span class="check" v-if="isCartNotEmpty()">{{this.getCart.length}}</span>
             shopping_cart
         </span>
