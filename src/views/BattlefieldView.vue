@@ -3,7 +3,7 @@
 
         <app-header :title="'Rise Of The Kingdom'" :subtitle="'Store'"></app-header>
         <span class="material-symbols-outlined" @click="navigateToCart">
-            <span class="check" v-if="isCartNotEmpty()"></span>
+            <span class="check" v-if="isCartNotEmpty()">{{this.getCart.length}}</span>
             shopping_bag
         </span>
         <div class="item-container">
@@ -20,7 +20,7 @@ import Item from '@/components/Store/Item.vue'
 export default {
     name: "battlefield-view",
     computed: {
-        ...mapGetters(['getUser','getCart']),
+        ...mapGetters(['getUser', 'getCart']),
     },
     components: {
         AppHeader,
@@ -73,8 +73,8 @@ export default {
         navigateToCart() {
             this.$router.push("/cart")
         },
-        isCartNotEmpty(){
-            return this.getCart.length>0;
+        isCartNotEmpty() {
+            return this.getCart.length > 0;
         }
     }
 }
@@ -94,19 +94,26 @@ export default {
     column-gap: 25px;
     row-gap: 15px;
 }
-.material-symbols-outlined{
+
+.material-symbols-outlined {
     align-self: flex-end;
-    margin:0 10px;
+    margin: 0 10px;
     position: relative;
-    font-size: 32px;
-    .check{
+    font-size: 40px;
+    color: #162041;
+
+    .check {
         position: absolute;
-        width: 15px;
-        height: 15px;
-        background-color: darken($color: #aa0082, $amount: 10);
+        width: 20px;
+        height: 20px;
+        background-color: #162041;
         border-radius: 50%;
         right: -2px;
-        top: 0;
+        top: 3px;
+        font-size: 20px;
+        font-family: 'ptmono';
+        text-align:center;
+        color: #fff;
     }
 }
 </style>

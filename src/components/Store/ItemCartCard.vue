@@ -93,6 +93,8 @@ button {
         bottom: 45px;
         padding: 3px;
 
+        background-color: #fff;
+        border-radius: 16px;
         button {
             display: flex;
             justify-content: center;
@@ -104,7 +106,7 @@ button {
         .increase {
             width: 25px;
             height: 25px;
-            background-color: darken($color: #aa0082, $amount: 10);
+            background-color: #162041;
             border-radius: 50%;
             position: relative;
             z-index: 2;
@@ -114,11 +116,16 @@ button {
                 padding-bottom: 6px;
             }
         }
-
+        .quantity {
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'ptmono';
+            color: #162041;
+        }
         .decrease {
             width: 25px;
             height: 25px;
-            background-color: #efc3e5;
+            background-color: lighten($color: #162041, $amount: 70);
             border-radius: 50%;
             position: relative;
             z-index: 2;
@@ -126,7 +133,7 @@ button {
             p {
                 font-size: 24px;
                 padding-bottom: 6px;
-                color: darken($color: #aa0082, $amount: 10);
+                color: #162041;
             }
         }
     }

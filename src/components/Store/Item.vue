@@ -26,9 +26,9 @@ export default {
             required: true,
         }
     },
-    methods:{
-        editQuantity(type){
-            this.$emit('editQuantity',this.itemInfo,type)
+    methods: {
+        editQuantity(type) {
+            this.$emit('editQuantity', this.itemInfo, type)
         }
     }
 }
@@ -55,14 +55,22 @@ button {
 
     &-price {
         font-size: 16px;
+        font-weight: bold;
+
+        color: #162041;
+        font-family: 'ptmono';
 
         span {
             font-size: 12px;
+            font-weight: bold;
+            color: #162041;
         }
     }
 
     &-name {
         font-size: 14px;
+        font-family: 'ptmono';
+        color: #3A3A3A;
     }
 
     .buttons-container {
@@ -75,6 +83,8 @@ button {
         right: 0;
         bottom: 45px;
         padding: 3px;
+        background-color: #fff;
+        border-radius: 16px;
 
         button {
             display: flex;
@@ -87,7 +97,7 @@ button {
         .increase {
             width: 25px;
             height: 25px;
-            background-color: darken($color: #aa0082, $amount: 10);
+            background-color: #162041;
             border-radius: 50%;
             position: relative;
             z-index: 2;
@@ -98,10 +108,17 @@ button {
             }
         }
 
+        .quantity {
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'ptmono';
+            color: #162041;
+        }
+
         .decrease {
             width: 25px;
             height: 25px;
-            background-color: #efc3e5;
+            background-color: lighten($color: #162041, $amount: 70);
             border-radius: 50%;
             position: relative;
             z-index: 2;
@@ -109,7 +126,7 @@ button {
             p {
                 font-size: 24px;
                 padding-bottom: 6px;
-                color: darken($color: #aa0082, $amount: 10);
+                color: #162041;
             }
         }
     }

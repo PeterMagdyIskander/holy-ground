@@ -17,7 +17,7 @@ import ItemCartCard from '@/components/Store/ItemCartCard.vue';
 export default {
     name: "cart-view",
     computed: {
-        ...mapGetters(['getCart']),
+        ...mapGetters(['getCart','getTeamData']),
     },
     components: {
         ItemCartCard,
@@ -35,7 +35,7 @@ export default {
                     break;
             }
         },
-         getTotal() {
+        getTotal() {
             let total = 0;
             this.getCart.forEach(item => total += item.quantity * item.price)
             return total
@@ -57,8 +57,8 @@ export default {
     height: 40px;
     margin: 25px auto;
     border-radius: 10px;
-    background-color: darken($color: #aa0082, $amount: 10);
-    border: 1px solid darken($color: #aa0082, $amount: 10);
+    background-color: #162041;
+    border: 1px solid #162041;
     color: #fff;
     font-family: 'ptmono';
 }
