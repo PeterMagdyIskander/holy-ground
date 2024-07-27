@@ -23,7 +23,7 @@ export default createStore({
     user: null,
     quests: [],
     cart: [],
-    teamData: {},
+    teamData: null,
     loading: false,
     failed: false,
   },

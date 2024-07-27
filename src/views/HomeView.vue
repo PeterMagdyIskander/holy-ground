@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <LoginPage v-if="getUser == null" />
+    <LoginPage v-if="getUser == null || getTeamData == null" />
     <profile-page v-else></profile-page>
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
     ProfilePage,
     Attendance
   },
-  computed: mapGetters(['getUser']),
+  computed: mapGetters(['getUser','getTeamData']),
  
 }
 </script>
