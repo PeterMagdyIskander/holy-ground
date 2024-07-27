@@ -22,9 +22,10 @@
                 </div>
             </div>
             <div class="team-container">
+                <p class="title">Team's Items</p>
                 <div class="item-container">
                     <p v-for="item in fashionShowItems" :key="item.name" :class="{ 'not-found': !item.isFound }">{{
-            item.icon }}</p>
+                        item.icon }}</p>
                 </div>
 
                 <h1 class="team-title" :class="getUser.teamId">{{ getUser.teamId }}</h1>
@@ -96,6 +97,11 @@ export default {
                 { id: 22, icon: "👛", name: "Clutch", price: 65, quantity: 0 },
                 { id: 23, icon: "🧳", name: "Suitcase", price: 250, quantity: 0 },
                 { id: 24, icon: "🌂", name: "Umbrella", price: 20, quantity: 0 }]
+        }
+    },
+    methods: {
+        navigateTo(to) {
+            this.$router.push(to);
         }
     }
 }
@@ -198,7 +204,7 @@ p {
         }
 
         .not-found {
-            filter: brightness(0.3);
+            filter: brightness(0.2);
         }
     }
 
@@ -206,6 +212,13 @@ p {
         font-family: 'pressstart2p';
         color: #f4ee80;
         text-shadow: 1px 2px #a14759;
+    }
+
+    .title {
+        font-family: 'ptmono';
+        font-size: 22px;
+        color: #E5E5E5;
+        margin-bottom: 15px;
     }
 }
 
