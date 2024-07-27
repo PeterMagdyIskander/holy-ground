@@ -42,16 +42,16 @@
                 <div class="difficulty">
                     <div class="difficulty-item" @click="form.category = 'physical'"
                         :class="{ 'selected': form.category == 'physical' }">
-                        <img src="@/assets/attack-icon.svg" alt="attack-icon">
+                        <img src="@/assets/physical-icon.svg" alt="attack-icon">
                     </div>
                     <div class="difficulty-item" @click="form.category = 'social'"
                         :class="{ 'selected': form.category == 'social' }">
-                        <img src="@/assets/defend-icon.svg" alt="quest-center-icon">
+                        <img src="@/assets/social-icon.svg" alt="quest-center-icon">
 
                     </div>
                     <div class="difficulty-item" @click="form.category = 'spiritual'"
                         :class="{ 'selected': form.category == 'spiritual' }">
-                        <img src="@/assets/heal-icon.svg" alt="my-quest-icon">
+                        <img src="@/assets/spiritual-icon.svg" alt="my-quest-icon">
                     </div>
                 </div>
             </div>
@@ -59,8 +59,7 @@
 
 
             <div class="submit-container">
-                <button type="submit" :disabled="!isFormValid"
-                    :class="{ 'disabled': !isFormValid }">SUBMIT</button>
+                <button type="submit" :disabled="!isFormValid" :class="{ 'disabled': !isFormValid }">SUBMIT</button>
             </div>
 
         </form>
@@ -69,7 +68,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import { collection, getFirestore, onSnapshot, doc, updateDoc, increment,addDoc } from 'firebase/firestore';
+import { collection, getFirestore, onSnapshot, doc, updateDoc, increment, addDoc } from 'firebase/firestore';
 import AppHeader from '@/components/Shared/AppHeader.vue';
 
 export default {
@@ -95,7 +94,7 @@ export default {
                 title: '',
                 description: '',
                 difficulty: 0,
-                category:'',
+                category: '',
                 reward: null,
             },
         };
@@ -110,7 +109,7 @@ export default {
                     description: this.form.description,
                     difficulty: this.form.difficulty,
                     reward: this.form.reward,
-                    category:this.form.category,
+                    category: this.form.category,
                     assignedTo: [],
                 });
                 alert('Quest added successfully!');
@@ -124,11 +123,14 @@ export default {
 </script>
 <style lang="scss" scoped>
 .home-container {
+    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 30px;
-    margin-top: 50px;
+    padding-top: 50px;
+    background-color: #162041;
 }
 
 .input-container {
@@ -169,6 +171,10 @@ export default {
         &-item {
             padding: 13px;
             cursor: pointer;
+        }
+
+        img {
+            width: 68px;
         }
 
         & .selected {

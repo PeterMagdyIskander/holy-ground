@@ -64,11 +64,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .home-container {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 30px;
-    margin-top: 50px;
+    padding-top:50px;
+    background-color: #162041;
 }
 
 .input-container {
